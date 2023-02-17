@@ -39,17 +39,52 @@
 
 }
 
-.hill{
+.hill0 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 1600px;
+    height: 1000px;
+    border-radius: 30px;
+    z-index: 6;
+}
+
+.hill1 {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 900px;
     z-index: 5;
-    border-bottom-left-radius: 30px;
-
+    border-radius: 30px;
 }
 
-.bottom{
+.hill2 {
+    position: absolute;
+    bottom: 0px;
+    left: 300px;
+    height: 850px;
+    z-index: 4;
+}
+
+.hill3 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 1200px;
+    z-index: 3;
+    border-radius: 30px;
+    transform: scaleX(-1);
+}
+
+.smoke {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 500px;
+    z-index: 5;
+}
+
+/*.bottom{
     position: absolute;
     width: 1600px;
     height: 154px;
@@ -71,7 +106,7 @@
     border-left: 400px solid transparent;
     border-bottom-right-radius: 30px;
 
-}
+}*/
 
 /*.sun {
     height: 80px;
