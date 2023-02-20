@@ -32,8 +32,9 @@
     text-align: center;
     font-family: 'Karla', sans-serif;
     color: whitesmoke;
-    text-shadow: 0px 0px 25px #ffffff;
+    text-shadow: 0px 0px 25px #ffb26f;
     z-index: 7;
+    animation: 5s anim-lineUp ease-out;
 }
 
 .text h1{
@@ -50,8 +51,29 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 45px;
-
 }
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 
 .sun{
     position: absolute;
@@ -65,17 +87,33 @@
     box-shadow: 0px 0px 70px #F2994A;
 
     transform: scale(1);
-    animation: pulse 4s ease infinite;
+    
+    animation: anime1 10s linear forwards, pulse 4s ease infinite;
 }
 
+@keyframes anime1 {
+    0% {
+        top: 50%;
+        left: 5%;
+    }
+    50%{
+        left: 10%;
+    }
+    100% {
+        top: 8%;
+        left: 20%;
+    }
+}
 @keyframes pulse {
     0% {
         transform: scale(0.90);
     }
+
     50% {
         transform: scale(1);
         box-shadow: 0px 0px 100px #F2994A;
     }
+
     100% {
         transform: scale(0.90);
     }
@@ -118,13 +156,8 @@
     transform: scaleX(-1);
 }
 
-.smoke1{
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 500px;
-    z-index: 5;
-}
+
+
 
 .flower{
     position: absolute;
@@ -165,7 +198,7 @@
 .p-flower6{ bottom: 35px; left: 140px;}
 .p-flower7{ bottom: 200px; left: 70px;}
 
-.f-flower1{ bottom: 340px;}
+.f-flower1{ bottom: 340px; left: 250px;}
 .f-flower2{ bottom: 310px; right: 400px;}
 .f-flower3{ bottom: 160px; right: 40px;}
 .f-flower4{ bottom: 100px; right: 220px;}
@@ -176,6 +209,102 @@
 .o-flower3{ bottom: 390px; left: 345px;}
 .o-flower4{ bottom: 280px; right: 470px;}
 
+
+.smoke1 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 500px;
+    z-index: 8;
+}
+
+.smoke2 {
+    position: absolute;
+    top: 220px;
+    left: 90px;
+    width: 600px;
+    z-index: 8;
+}
+
+.smoke3 {
+    position: absolute;
+    top: 10px;
+    right: 90px;
+    width: 800px;
+    z-index: 8;
+}
+
+.smoke4 {
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    width: 600px;
+    z-index: 8;
+}
+
+.smoke5 {
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    width: 400px;
+    z-index: 8;
+}
+
+.smoke6 {
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    width: 400px;
+    z-index: 8;
+}
+
+.smoke7 {
+    position: absolute;
+    top: -40px;
+    left: -150px;
+    width: 400px;
+    z-index: 6;
+}
+
+.smoke8 {
+    position: absolute;
+    top: 0px;
+    right: -150px;
+    width: 400px;
+    z-index: 6;
+}
+.smoke1, .smoke2, .smoke3, .smoke4, .smoke5, .smoke6, .smoke7, .smoke8 {
+    position: absolute;
+    animation: anime3 100s linear 5s infinite;
+}
+
+@keyframes anime3 {
+    to{
+        left: 100%;
+    }
+}
+
+.dark {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: rgba(13, 19, 24, 0.6);
+    border-radius: 30px;
+    animation: anime2 10s linear forwards;
+}
+
+@keyframes anime2 {
+    0% {
+        background: rgba(13, 19, 24, 0.7);
+    }
+
+    100% {
+        background: rgba(13, 19, 24, 0);
+    }
+}
 
 /*.bottom{
     position: absolute;
@@ -201,76 +330,13 @@
 
 }*/
 
-/*.sun {
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background: rgb(243, 156, 18);
-    box-shadow: 0px 0px 15px rgb(243, 156, 18),
-        0px 0px 15px rgb(243, 156, 18);
-    z-index: 2;
-    animation: anime1 10s linear forwards;
-}
 
 
-@keyframes anime1 {
-    0% {
-        top: 50%;
-        box-shadow: 0px 0px 15px rgb(243, 156, 18),
-            0px 0px 15px rgb(243, 156, 18);
-        background: rgb(243, 156, 18);
-    }
 
-    100% {
-        top: 8%;
-        background: rgb(255, 255, 0);
-        box-shadow: 0px 0px 50px rgb(255, 255, 0),
-            0px 0px 150px rgb(255, 255, 0);
-    }
-}
 
-.dark {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: 5;
-    background: rgba(13, 19, 24, 0.7);
-    animation: anime2 10s linear forwards;
-}
 
-@keyframes anime2 {
-    0% {
-        background: rgba(13, 19, 24, 0.7);
-    }
 
-    100% {
-        background: rgba(13, 19, 24, 0);
-    }
-}
-
-.cloud {
-    height: 50px;
-    position: absolute;
-    top: 15%;
-    left: -10%;
-    animation: anime3 10s linear forwards;
-}
-
-@keyframes anime3 {
-    0% {
-        left: -10%;
-    }
-
-    100% {
-        left: 30%;
-    }
-}
+/*
 
 .birds {
     position: absolute;
@@ -298,27 +364,5 @@
     }
 }
 
-h1 {
-    position: absolute;
-    left: -21%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: wheat;
-    background: rgba(102, 51, 153, 0.6);
-    animation: anime5 0.4s ease-in 11s forwards;
-    border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-    z-index: 7;
-    padding: 10px;
-}
 
-@keyframes anime5 {
-    0% {
-        left: -21%;
-    }
-
-    100% {
-        left: 50%;
-    }
-}
 */
